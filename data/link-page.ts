@@ -10,7 +10,7 @@ export const linkPageData: {
   links: LinkItem[];
 } = {
   profile: {
-    logoSrc: "/assets/logo-certa-symbol.png",
+    logoSrc: "/assets/logo-certa-symbol-optimized.png",
     brandName: "Kakau",
     brandAccent: "Brigaderia",
     description: "Doces artesanais, encomendas e menu sazonal.",

@@ -30,6 +30,7 @@
   flex-direction: column;
   align-items: center;
   gap: 10px;
+  width: 100%;
 }
 
 .title {
@@ -37,6 +38,10 @@
   color: var(--color-text);
   letter-spacing: -0.04em;
   line-height: 0.95;
+  display: inline-flex;
+  align-items: baseline;
+  justify-content: center;
+  flex-wrap: nowrap;
 }
 
 .titlePrimary {
@@ -50,6 +55,11 @@
   font-size: clamp(2rem, 7vw, 2.65rem);
   font-weight: 400;
   letter-spacing: -0.04em;
+}
+
+.titleSpacer {
+  width: 0.18em;
+  flex: 0 0 auto;
 }
 
 .description {
