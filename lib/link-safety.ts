@@ -1,4 +1,4 @@
-export type LinkIcon = "whatsapp" | "leaf" | "bunny" | "external";
+export type LinkIcon = "whatsapp" | "leaf" | "bunny" | "menu" | "calculator" | "external";
 
 export type LinkItem = {
   id: string;
@@ -77,3 +77,4 @@ export function buildPublicLinkItems(links: LinkItem[]) {
 
   return { items, errors };
 }
+
