@@ -32,11 +32,9 @@ export function FaqSection({ items }: FaqSectionProps) {
                 <span className={styles.questionText}>{item.question}</span>
                 <span aria-hidden="true" className={`${styles.chevron} ${isOpen ? styles.chevronOpen : ""}`}>›</span>
               </button>
-              {isOpen && (
-                <div className={styles.answer}>
-                  <p>{item.answer}</p>
-                </div>
-              )}
+              <div className={`${styles.answer} ${isOpen ? styles.answerOpen : ""}`}>
+                <p>{item.answer}</p>
+              </div>
             </li>
           );
         })}
