@@ -2,15 +2,8 @@
 import { useState } from "react";
 import styles from "@/styles/faq-section.module.css";
 
-type FaqItem = {
-  id: string;
-  question: string;
-  answer: string;
-};
-
-type FaqSectionProps = {
-  items: FaqItem[];
-};
+type FaqItem = { id: string; question: string; answer: string };
+type FaqSectionProps = { items: FaqItem[] };
 
 export function FaqSection({ items }: FaqSectionProps) {
   const [openId, setOpenId] = useState<string | null>(null);
@@ -33,7 +26,9 @@ export function FaqSection({ items }: FaqSectionProps) {
                 <span aria-hidden="true" className={`${styles.chevron} ${isOpen ? styles.chevronOpen : ""}`}>›</span>
               </button>
               <div className={`${styles.answer} ${isOpen ? styles.answerOpen : ""}`}>
-                <p>{item.answer}</p>
+                <div className={styles.answerInner}>
+                  <p>{item.answer}</p>
+                </div>
               </div>
             </li>
           );
