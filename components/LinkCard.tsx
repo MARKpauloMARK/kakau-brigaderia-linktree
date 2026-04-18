@@ -1,4 +1,4 @@
-import { BunnyIcon, ExternalLinkIcon, LeafIcon, WhatsAppIcon } from "@/components/icons";
+import { BunnyIcon, CalcIcon, ExternalLinkIcon, LeafIcon, MenuIcon, WhatsAppIcon } from "@/components/icons";
 import type { PublicLinkItem } from "@/lib/link-safety";
 import styles from "@/styles/link-card.module.css";
 
@@ -14,6 +14,10 @@ function getIcon(icon: PublicLinkItem["icon"]) {
       return <LeafIcon className={styles.icon} />;
     case "bunny":
       return <BunnyIcon className={styles.icon} />;
+    case "menu":
+      return <MenuIcon className={styles.icon} />;
+    case "calculator":
+      return <CalcIcon className={styles.icon} />;
     default:
       return <ExternalLinkIcon className={styles.icon} />;
   }
@@ -37,3 +41,4 @@ export function LinkCard({ item }: LinkCardProps) {
     </a>
   );
 }
+
