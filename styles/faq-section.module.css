@@ -1,6 +1,9 @@
 .section {
   width: 100%;
-  margin-top: 28px;
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }
 
 .heading {
@@ -10,31 +13,39 @@
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--color-text-soft);
-  margin-bottom: 12px;
-  padding: 0 8px;
   text-align: center;
+  margin: 0;
 }
 
 .list {
   list-style: none;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 24px;
+  padding: 0;
+  margin: 0;
 }
 
 .item {
   width: 100%;
-  border-radius: var(--radius-card);
+  border-radius: var(--radius-pill);
   background: linear-gradient(180deg, rgba(255,255,255,0.9), var(--color-surface));
   box-shadow: var(--shadow-card);
   overflow: hidden;
+  transition: border-radius 0.22s ease;
+}
+
+.itemOpen {
+  border-radius: 32px;
 }
 
 .question {
   width: 100%;
-  display: flex;
+  min-height: 64px;
+  display: grid;
+  grid-template-columns: 1fr 24px;
   align-items: center;
-  justify-content: space-between;
   gap: 12px;
   padding: 18px 24px;
   background: none;
@@ -50,6 +61,7 @@
   font-weight: 600;
   line-height: 1.4;
   color: var(--color-text);
+  text-align: center;
 }
 
 .chevron {
@@ -59,6 +71,7 @@
   flex-shrink: 0;
   transition: transform 0.22s ease;
   display: inline-block;
+  justify-self: end;
 }
 
 .chevronOpen {
@@ -76,5 +89,16 @@
   line-height: 1.65;
   color: var(--color-text-soft);
   margin: 12px 0 0;
+}
+
+@media (min-width: 768px) {
+  .question {
+    min-height: 72px;
+    padding: 20px 28px;
+  }
+
+  .answer {
+    padding: 0 28px 20px;
+  }
 }
 
