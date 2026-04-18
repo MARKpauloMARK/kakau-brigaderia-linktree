@@ -22,10 +22,10 @@ export function FaqSection({ items }: FaqSectionProps) {
         {items.map((item) => {
           const isOpen = openId === item.id;
           return (
-            <li key={item.id} className={styles.item}>
+            <li key={item.id} className={`${styles.item} ${isOpen ? styles.itemOpen : ""}`}>
               <button
                 aria-expanded={isOpen}
-                className={`${styles.question} ${isOpen ? styles.questionOpen : ""}`}
+                className={styles.question}
                 type="button"
                 onClick={() => setOpenId(isOpen ? null : item.id)}
               >
