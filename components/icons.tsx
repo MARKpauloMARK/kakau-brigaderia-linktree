@@ -98,6 +98,47 @@ export function BunnyIcon({ className }: IconProps) {
   );
 }
 
+export function MenuIcon({ className }: IconProps) {
+  return (
+    <svg
+      aria-hidden="true"
+      className={className}
+      fill="none"
+      viewBox="0 0 24 24"
+    >
+      <path
+        d="M7 4.5h10A2.5 2.5 0 0 1 19.5 7v10a2.5 2.5 0 0 1-2.5 2.5H7A2.5 2.5 0 0 1 4.5 17V7A2.5 2.5 0 0 1 7 4.5Z"
+        stroke="currentColor"
+        strokeWidth="1.7"
+      />
+      <path d="M8.5 9h7" stroke="currentColor" strokeLinecap="round" strokeWidth="1.7" />
+      <path d="M8.5 12h7" stroke="currentColor" strokeLinecap="round" strokeWidth="1.7" />
+      <path d="M8.5 15h4.5" stroke="currentColor" strokeLinecap="round" strokeWidth="1.7" />
+      <path d="M7.5 4.5v15" stroke="currentColor" strokeOpacity="0.22" strokeWidth="1.7" />
+    </svg>
+  );
+}
+
+export function CalcIcon({ className }: IconProps) {
+  return (
+    <svg
+      aria-hidden="true"
+      className={className}
+      fill="none"
+      viewBox="0 0 24 24"
+    >
+      <rect x="4.5" y="2.5" width="15" height="19" rx="2.5" stroke="currentColor" strokeWidth="1.7" />
+      <rect x="7" y="5" width="10" height="4" rx="1.2" fill="currentColor" fillOpacity="0.15" stroke="currentColor" strokeWidth="1.3" />
+      <circle cx="8.5" cy="13" r="1.1" fill="currentColor" />
+      <circle cx="12" cy="13" r="1.1" fill="currentColor" />
+      <circle cx="15.5" cy="13" r="1.1" fill="currentColor" />
+      <circle cx="8.5" cy="17" r="1.1" fill="currentColor" />
+      <circle cx="12" cy="17" r="1.1" fill="currentColor" />
+      <circle cx="15.5" cy="17" r="1.1" fill="currentColor" />
+    </svg>
+  );
+}
+
 export function ExternalLinkIcon({ className }: IconProps) {
   return (
     <svg
