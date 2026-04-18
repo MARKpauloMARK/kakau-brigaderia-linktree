@@ -24,11 +24,19 @@ export const linkPageData: {
       featured: true,
     },
     {
-      id: "menu-pascoa",
-      title: "MENU DE PASCOA",
-      url: "/docs/cardapio-kakau-pascoa.pdf",
-      icon: "bunny",
+      id: "menu-brigadeiros",
+      title: "Menu - Brigadeiros",
+      url: "/docs/cardapio-kakau.pdf",
+      icon: "menu",
+      featured: false,
+    },
+    {
+      id: "calculadora",
+      title: "Calculadora de Brigadeiros",
+      url: "https://calculadora-wheat-pi.vercel.app",
+      icon: "calculator",
       featured: false,
     },
   ],
 };
+
