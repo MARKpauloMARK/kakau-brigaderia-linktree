@@ -1,4 +1,5 @@
 import { BrandHeader } from "@/components/BrandHeader";
+import { FaqSection } from "@/components/FaqSection";
 import { LinkList } from "@/components/LinkList";
 import { PageRuntimeLogger } from "@/components/PageRuntimeLogger";
 import { linkPageData } from "@/data/link-page";
@@ -7,7 +8,7 @@ import { devError, devWarn } from "@/lib/logger";
 import styles from "@/styles/page.module.css";
 
 export default function HomePage() {
-  const { profile, links } = linkPageData;
+  const { profile, links, faq } = linkPageData;
   const sanitizedLinks = buildPublicLinkItems(links);
 
   if (sanitizedLinks.errors.length > 0) {
@@ -37,7 +38,9 @@ export default function HomePage() {
           description={profile.description}
         />
         <LinkList items={sanitizedLinks.items} />
+        {faq && faq.length > 0 && <FaqSection items={faq} />}
       </div>
     </main>
   );
 }
+
